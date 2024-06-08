@@ -25,10 +25,19 @@ SECRET_KEY = 'django-insecure-)iloz*h&#eoaw75m#-+b)aurle_(5e3ma#objufyuru-#f)iqd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh','localhost','127.0.0.1','*']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','localhost','127.0.0.1','transitxpress-production.up.railway.app']
 
 
 # Application definition
+CSRF_TRUSTED_ORIGINS = [
+    'https://transitxpress-production.up.railway.app',  # Your deployed domain
+    # Add any other trusted origins if applicable
+]
+
+CSRF_COOKIE_SECURE = True  # Set to True for production
+SESSION_COOKIE_SECURE = True  # Set to True for production
+CSRF_COOKIE_DOMAIN = 'transitxpress-production.up.railway.app'
+CSRF_COOKIE_HTTPONLY = True 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
