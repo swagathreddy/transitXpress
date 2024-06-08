@@ -6,9 +6,9 @@
 body{
     font-family: sans-serif;
     background-image: url(image/background4.png);
-    background-color: rgba(255, 255, 255, 0.5) ;
+    background-color: rgba(255, 255, 255, 0.9) ;
     background-repeat: no-repeat;
-    background-size:100% 70%;
+    background-size:120% 52%;
     
     
 }
@@ -143,12 +143,23 @@ h1{
     text-align: center;
     margin-bottom: 20px;
 }
-@media(max-width:922px){
+@media screen and (max-width:922px){
     .header{
         padding: 1.3rem 4% ;
     }
+    body{
+        background-size: 120% 30%;
+        background-image: url(image/background4.png);
+    }
 }
-@media(max-width:768px){
+@media screen and (max-width:768px){
+    body{
+      
+        background-position: center top;
+        background-size: 100% 30%;
+        background-image: url(image/background4.png);
+
+    }
     .icons{
         display: inline-flex;
     }
@@ -219,13 +230,11 @@ h1{
     }
 }
 @media screen and (max-width:460px){
-    .body{
-        margin: 0;
-        padding:0;
-        max-width: 300px;
-        background-image: url(image/background4mobile.png);
-        background-color: rgba(255, 255, 255, 0.5) ;
-        background-repeat: no-repeat;
+    body{
+        
+        background-size: 120% 38rem;
+        background-image: url(image/background4.png);
+
     }
     .container{
         flex-direction: column;
