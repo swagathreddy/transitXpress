@@ -25,19 +25,7 @@ SECRET_KEY = 'django-insecure-)iloz*h&#eoaw75m#-+b)aurle_(5e3ma#objufyuru-#f)iqd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh','localhost','127.0.0.1','transitxpress-production.up.railway.app','web-production-206bd.up.railway.app','transitxpress.up.railway.app']
-
-
-# Application definition
-CSRF_TRUSTED_ORIGINS = [
-    'https://transitxpress-production.up.railway.app',  # Your deployed domain
-    # Add any other trusted origins if applicable
-]
-
-CSRF_COOKIE_SECURE = True  # Set to True for production
-SESSION_COOKIE_SECURE = True  # Set to True for production
-CSRF_COOKIE_DOMAIN = 'transitxpress-production.up.railway.app'
-CSRF_COOKIE_HTTPONLY = True 
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','localhost','127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -54,11 +42,17 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CSRF_TRUSTED_ORIGINS = ['http://localhost', 'http://127.0.0.1']
+
+
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_HTTPONLY = False
 
 ROOT_URLCONF = 'TransitXpress.urls'
 
@@ -85,13 +79,13 @@ WSGI_APPLICATION = 'TransitXpress.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-      'default': {
+       'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         "USER":'postgres',
-        "PASSWORD":"qFhqrsJkDMMkaEcKuUvGxgZeVaHfdOFM",
-        "HOST":"roundhouse.proxy.rlwy.net",
-        "PORT":"53607",
+        "PASSWORD":"VIoUATPrrpliDxTkecTXMRJlqeslxHhP",
+        "HOST":"junction.proxy.rlwy.net",
+        "PORT":"47194",
     }
 }
 
