@@ -16,18 +16,20 @@
             padding: 0;
             background-image: url(/static/image/hyderabad.jpg) ;
             background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 1300px 550px;
+           
+    background-attachment: fixed;
+    background-size: cover; /* Ensures the image covers the screen */
+    background-position: center; 
+            background-color: rgba(198, 178, 178, 0.8);
             background-color: rgba(198, 178, 178, 0.8);
             
-            margin-top: 100px;
         }
 
         .ticket-container {
             background-color: rgba(38, 22, 22, 0.7);
             color: azure;
             max-width: 800px;
-            margin: 20px auto;
+            margin: 10rem auto;
             
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -101,10 +103,16 @@
                 height: auto;
             }
         }
-        .footer{
-            margin-top: 10px;
-            text-align: center;
-            margin-bottom: 20px;
+        .footer {
+    font-size: 1.2rem; /* Increase font size */
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Add background for better contrast */
+    padding: 10px 0;
+    position: fixed; /* Fix it at the bottom */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Ensure it spans the full width */
+    
         }
     </style>
 </head>
