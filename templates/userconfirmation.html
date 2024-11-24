@@ -77,9 +77,14 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        
         
         background-image: url(/static/image/confirmationimage.png);
+        background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; /* Ensures the image covers the screen */
+    background-position: center; /* Centers the image */
+
     }
 
     .confirmation-container {
@@ -87,7 +92,7 @@
         color: azure;
         max-width: 800px;
         font-size: 1.2rem;
-        margin: 40px auto;
+        margin: 12rem auto;
         
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -162,14 +167,26 @@
     input[type="checkbox"] {
         margin-right: 15px;
     }
+    @media screen and (max-width: 600px) {
+    .footer {
+        font-size: 1rem; /* Slightly smaller font size for small screens */
+        padding: 8px 0;
+    }
+}
    
 }
-.footer{
-    margin-top: 10px;
+.footer {
+    font-size: 1.2rem; /* Increase font size */
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
-    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8); /* Add background for better contrast */
+    padding: 10px 0;
+    position: fixed; /* Fix it at the bottom */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Ensure it spans the full width */
+    margin-bottom: 0;
 }
+
  
 </style>
 
