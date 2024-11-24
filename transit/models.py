@@ -28,7 +28,12 @@ class Confirmation(models.Model):
     to_location = models.CharField(max_length=255, null=True, blank=True)
     passenger_name = models.CharField(max_length=255)
     email = models.EmailField()
-    payment_mode = models.CharField(max_length=20, null=True, blank=True, default=1)
+    PAYMENT_MODES = [
+    ('cash', 'Cash'),
+    ('card', 'Card'),
+    ('online', 'Online'),
+    ]
+    payment_mode = models.CharField(max_length=20, choices=PAYMENT_MODES, default='cash')
     booking_date = models.DateField(null=True, blank=True)
     qr_code_image = models.BinaryField(null=True, blank=True)
     
