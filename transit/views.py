@@ -26,7 +26,11 @@ def index(request):
     return render(request, 'index.html')
 
 def register(request):
+    print("CSRF Token (Cookie):", request.COOKIES.get('csrftoken'))
+    print("CSRF Token (POST):", request.POST.get('csrfmiddlewaretoken'))
     if request.method == 'POST':
+        print("POST request received")
+        print(request.POST)
         username = request.POST['username']
         email = request.POST['email']
         password = request.POST['password']
