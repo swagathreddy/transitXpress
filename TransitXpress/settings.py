@@ -80,13 +80,13 @@ WSGI_APPLICATION = 'TransitXpress.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-       'default': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
-        "USER":'postgres',
-        "PASSWORD":"VIoUATPrrpliDxTkecTXMRJlqeslxHhP",
-        "HOST":"junction.proxy.rlwy.net",
-        "PORT":"47194",
+        'USER': 'postgres',
+        'PASSWORD': 'AvthoyRjuZpyiGfLfxziWZSMKKCIzMeV',  # Using the password from the connection string
+        'HOST': 'turntable.proxy.rlwy.net',
+        'PORT': '43590'  # Using the port from the connection string
     }
 }
 
