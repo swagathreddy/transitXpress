@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CSRF_TRUSTED_ORIGINS = ['http://localhost', 'http://127.0.0.1','.railway.app']
+CSRF_TRUSTED_ORIGINS = ['http://localhost', 'http://127.0.0.1','https://transitxpress-production.up.railway.app']
 
 
 
